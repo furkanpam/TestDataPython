@@ -1,10 +1,10 @@
-﻿using Vanguard.Abstraction.Attributes;
-using Vanguard.Abstraction.Data.MongoDb;
-using Vanguard.Abstraction.Domain;
-using Vanguard.Abstraction.Settings;
+﻿using Asis.McGate.Abstraction.Settings;
 using MongoDB.Bson;
 using MongoDB.Driver;
 using System.Linq.Expressions;
+using Vanguard.Abstraction.Attributes;
+using Vanguard.Abstraction.Data.MongoDb;
+using Vanguard.Abstraction.Domain;
 
 namespace Vanguard.Core.Data
 {

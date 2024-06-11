@@ -11,4 +11,8 @@
     <Folder Include="Repositories\Concrete\" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\Vanguard.Domain\Vanguard.Domain.csproj" />
+  </ItemGroup>
+
 </Project>

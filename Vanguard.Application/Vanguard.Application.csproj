@@ -9,8 +9,13 @@
   <ItemGroup>
     <Folder Include="Behaviors\" />
     <Folder Include="Commands\" />
+    <Folder Include="HealthChecks\" />
     <Folder Include="Helpers\" />
     <Folder Include="Queries\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Vanguard.Infrastructure\Vanguard.Infrastructure.csproj" />
   </ItemGroup>
 
 </Project>

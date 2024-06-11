@@ -1,21 +1,14 @@
-﻿using Amazon.Runtime;
-using Microsoft.EntityFrameworkCore;
-using System;
-using System.Collections.Generic;
+﻿using Microsoft.EntityFrameworkCore;
 using System.Diagnostics.CodeAnalysis;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Vanguard.Abstraction.Consts;
 using Vanguard.Abstraction.Data.Context;
 
 namespace Vanguard.Domain.Context
 {
-    public partial class VanguardDbContext :DbContextBase
+    public partial class VanguardDbContext : DbContextBase
     {
         public VanguardDbContext()
         {
-                
+
         }
         public VanguardDbContext([NotNull] DbContextOptions<VanguardDbContext> options) : base(options)
         {
@@ -23,7 +16,7 @@ namespace Vanguard.Domain.Context
         }
 
         #region DbSet
-     
+
         #endregion
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)

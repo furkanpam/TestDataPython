@@ -6,4 +6,9 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\Vanguard.Abstraction\Vanguard.Abstraction.csproj" />
+    <ProjectReference Include="..\Vanguard.Core\Vanguard.Core.csproj" />
+  </ItemGroup>
+
 </Project>

@@ -1,14 +1,6 @@
-﻿using Microsoft.EntityFrameworkCore.Storage;
-using Microsoft.EntityFrameworkCore;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Storage;
 using System.Data;
-using Microsoft.EntityFrameworkCore.Infrastructure;
-using Newtonsoft.Json.Linq;
-using System.Collections.Concurrent;
 using Vanguard.Abstraction.Data.EfCore.UnitOfwork;
 
 namespace Vanguard.Core.Data.UnitOfWork
