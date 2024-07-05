@@ -21,7 +21,7 @@ namespace Vanguard.Domain.Context
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer("Server=.;Database=Vanguard;User ID=user;Password=1234;MultipleActiveResultSets=true;TrustServerCertificate=true;");
+            optionsBuilder.UseNpgsql("Server=.;Database=Vanguard;User ID=user;Password=1234;MultipleActiveResultSets=true;TrustServerCertificate=true;");
             optionsBuilder.LogTo(Console.WriteLine);
         }
 

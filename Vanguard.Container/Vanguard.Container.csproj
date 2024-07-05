@@ -9,6 +9,7 @@
   <ItemGroup>
     <ProjectReference Include="..\Vanguard.Abstraction\Vanguard.Abstraction.csproj" />
     <ProjectReference Include="..\Vanguard.Core\Vanguard.Core.csproj" />
+    <ProjectReference Include="..\Vanguard.Domain\Vanguard.Domain.csproj" />
   </ItemGroup>
 
 </Project>

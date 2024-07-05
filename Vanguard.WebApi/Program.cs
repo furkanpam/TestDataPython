@@ -1,11 +1,16 @@
+using Vanguard.WebApi;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
-
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
+builder.Services.AddHttpClient();
+builder.Services.AddHttpClient<ExchangeRateService>(); 
+builder.Services.AddHttpClient<WeatherService>();
+
 
 var app = builder.Build();
 

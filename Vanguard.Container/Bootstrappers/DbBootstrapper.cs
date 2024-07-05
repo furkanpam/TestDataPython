@@ -25,7 +25,7 @@ namespace Vanguard.Container.Bootstrappers
             string key = ResourceHelper.GetString("TripleDesKey");
             Console.WriteLine(key);
             if (string.IsNullOrEmpty(key))
-                throw new BusinessException(VanguardStatusCodes.Status111DataNotFound, "Triple Des Key Not Found!");
+                throw new BusinessException(StatusCodes.Status111DataNotFound, "Triple Des Key Not Found!");
 
             string decryptStr = TripleDesEncryption.Decrypt(dbSettings.ConnectionString, key);
             Console.WriteLine(decryptStr);
