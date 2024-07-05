@@ -3,7 +3,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace Vanguard.Core.Domain.Entity
 {
-    public abstract class BaseEntity<TKey> : IBaseEntity
+    public abstract class BaseEntity<TKey> : CardEntity
     {
         [Key]
         public TKey Id { get; set; }

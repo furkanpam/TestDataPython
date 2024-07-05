@@ -4,7 +4,7 @@ using System.Linq.Expressions;
 
 namespace Vanguard.Abstraction.Data.EfCore.Repository
 {
-    public interface IRepository<TEntity> where TEntity : class, IBaseEntity
+    public interface IRepository<TEntity> where TEntity : class, CardEntity
     {
         int Count(Expression<Func<TEntity, bool>> predicate = null);
 

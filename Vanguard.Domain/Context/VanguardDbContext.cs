@@ -1,6 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using System.Diagnostics.CodeAnalysis;
 using Vanguard.Abstraction.Data.Context;
+using Vanguard.Domain.Entities;
 
 namespace Vanguard.Domain.Context
 {
@@ -16,6 +17,10 @@ namespace Vanguard.Domain.Context
         }
 
         #region DbSet
+        public virtual DbSet<Account> Accounts { get; set; }
+        public virtual DbSet<Identifier> Identifiers { get; set; }
+     //   public virtual DbSet<Account> Accounts { get; set; }
+       // public virtual DbSet<Account> Accounts { get; set; }
 
         #endregion
 

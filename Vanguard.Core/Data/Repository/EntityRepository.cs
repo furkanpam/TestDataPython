@@ -14,7 +14,7 @@ using System.Transactions;
 
 namespace Vanguard.Core.Data
 {
-    public partial class EntityRepository<TEntity> : IRepository<TEntity> where TEntity : class, IBaseEntity
+    public partial class EntityRepository<TEntity> : IRepository<TEntity> where TEntity : class, CardEntity
     {
         public DbContextBase dbContext;
         protected DbSet<TEntity> DbSet { get; }
