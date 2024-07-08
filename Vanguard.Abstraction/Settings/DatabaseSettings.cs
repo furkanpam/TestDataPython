@@ -8,7 +8,7 @@ using Vanguard.Abstraction.Enums;
 
 namespace Vanguard.Abstraction.Settings
 {
-    [AppSetting(Path = "Databases:NewDbName")]
+    [AppSetting(Path = "Databases:PostgreSql")]
     public class DatabaseSettings : ISettingsBase
     {
         public string DbKey { get; set; }

@@ -1,4 +1,4 @@
-﻿using Vanguard.Application.Managers.User;
+﻿//using Vanguard.Application.Managers.User;
 using Microsoft.Extensions.DependencyInjection;
 
 namespace Vanguard.Container.Bootstrappers
@@ -7,7 +7,7 @@ namespace Vanguard.Container.Bootstrappers
     {
         public static void RegisterManagers(this IServiceCollection services)
         {
-            services.AddScoped<IUserManager, UserManager>();
+            //services.AddScoped<IUserManager, UserManager>();
 
 
         }

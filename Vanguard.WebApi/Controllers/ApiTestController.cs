@@ -6,11 +6,11 @@ namespace Vanguard.WebApi.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class TestController : ControllerBase
+    public class ApiTestController : ControllerBase
     {
         private readonly HttpClient httpClient;
 
-        public TestController(HttpClient httpClient)
+        public ApiTestController(HttpClient httpClient)
         {
             this.httpClient = httpClient;
         }
@@ -18,7 +18,7 @@ namespace Vanguard.WebApi.Controllers
         [HttpGet("[Action]")]
         public async Task<IActionResult> GetExternalData()
         {
-            var response = await httpClient.GetAsync("https://jsonplaceholder.typicode.com/posts");
+            var response = await httpClient.GetAsync("https://apitest.albarakaturk.com.tr/api");
 
             if (response is not null)
             {

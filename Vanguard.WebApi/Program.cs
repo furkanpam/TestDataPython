@@ -1,15 +1,19 @@
-using Vanguard.WebApi;
+using Vanguard.Container.Bootstrappers;
+using Vanguard.Core.Helpers;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllers();
+AppSettingsHelper.AppSettingsHelperConfigure(builder.Configuration);
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
-builder.Services.AddHttpClient();
-builder.Services.AddHttpClient<ExchangeRateService>(); 
-builder.Services.AddHttpClient<WeatherService>();
+builder.Services.AddDbContext();
+//builder.Services.RegisterRepositories();
+//builder.Services.RegisterManagers();
+//builder.Services.RegisterMapper();
+//builder.Services.RegisterIntegration();
 
 
 var app = builder.Build();
@@ -20,6 +24,8 @@ if (app.Environment.IsDevelopment())
     app.UseSwagger();
     app.UseSwaggerUI();
 }
+
+app.AddHelpers();
 
 app.UseHttpsRedirection();
 

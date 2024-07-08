@@ -63,53 +63,6 @@ namespace Vanguard.Domain.Entities
         public decimal SubTotalXAUBalance { get; set; }
     }
 
-    public class Account
-    {
-        public string AccountBranchName { get; set; }
-        public string AccountClosingDate { get; set; }
-        public object AccountClosingUserCode { get; set; }
-        public DateTime AccountOpeningDate { get; set; }
-        public decimal AvailableBalance { get; set; }
-        public decimal Balance { get; set; }
-        public string BlockageExplanation { get; set; }
-        public string BlockageReasonCode { get; set; }
-        public string BlockageReasonCodeName { get; set; }
-        public string BlockageType { get; set; }
-        public string BlockageUserCode { get; set; }
-        public bool CanBeDisplayed { get; set; }
-        public bool CanBeUsedInTransactions { get; set; }
-        public string CurrencyCode { get; set; }
-        public string DormantFlag { get; set; }
-        public int GeneralLedgerNumber { get; set; }
-        public string Iban { get; set; }
-        public Identifier Identifier { get; set; }
-        public string IntervalDepositValueDate { get; set; }
-        public bool IsAggregatedAccount { get; set; }
-        public bool IsBlockedAccount { get; set; }
-        public bool IsClosed { get; set; }
-        public bool IsDisplayedOnInternet { get; set; }
-        public bool IsFavouriteAccount { get; set; }
-        public bool IsPartialBlockedAccount { get; set; }
-        public bool IsPersonnelAccount { get; set; }
-        public DateTime LastUpdateDate { get; set; }
-        public string MaturityDate { get; set; }
-        public int MaturityType { get; set; }
-        public object MaturityTypeDefinition { get; set; }
-        public string Name { get; set; }
-        public string OriginalProductCode { get; set; }
-        public bool ParticipationAccount { get; set; }
-        public string ProductCode { get; set; }
-        public object ProfitAccrualFrequency { get; set; }
-        public object ProfitAccrualFrequencyDefinition { get; set; }
-        public decimal ProfitRate { get; set; }
-        public string ProjectCode { get; set; }
-        public string ShortName { get; set; }
-        public decimal TotalPartialBlockageAmount { get; set; }
-        public string TracingFlag { get; set; }
-        public DateTime ValueDate { get; set; }
-    }
-
-
     public class BmdAccount
     {
         public decimal BmdAccountBalance { get; set; }

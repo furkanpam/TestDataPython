@@ -22,36 +22,24 @@ namespace Vanguard.Container.Bootstrappers
         public static void AddDbContext(this IServiceCollection services)
         {
             DatabaseSettings dbSettings = AppSettingsHelper.GetData<DatabaseSettings>();
-            string key = ResourceHelper.GetString("TripleDesKey");
-            Console.WriteLine(key);
-            if (string.IsNullOrEmpty(key))
-                throw new BusinessException(StatusCodes.Status111DataNotFound, "Triple Des Key Not Found!");
 
-            string decryptStr = TripleDesEncryption.Decrypt(dbSettings.ConnectionString, key);
-            Console.WriteLine(decryptStr);
             services.AddBackendDataEF<VanguardDbContext>(new ContextConfiguration
             {
-                ConnectionString = decryptStr,
-                DatabaseType = dbSettings.DatabaseType
-            });
-
-            services.AddBackendDataEF<VanguardHealthCheckDbContext>(new ContextConfiguration
-            {
-                ConnectionString = decryptStr,
+                ConnectionString = dbSettings.ConnectionString,
                 DatabaseType = dbSettings.DatabaseType
             });
         }
 
-        public static void AddMongoDb(this IServiceCollection services, IConfiguration configuration)
-        {
-            var mongodbConfig = configuration.GetSection("Databases:MongoDbSettings").Get<MongoDbSettings>(); ;
-            services.Configure<MongoDbSettings>(config => 
-            {
-                config = mongodbConfig;
-            });
+        //public static void AddMongoDb(this IServiceCollection services, IConfiguration configuration)
+        //{
+        //    var mongodbConfig = configuration.GetSection("Databases:MongoDbSettings").Get<MongoDbSettings>(); ;
+        //    services.Configure<MongoDbSettings>(config => 
+        //    {
+        //        config = mongodbConfig;
+        //    });
 
-            services.AddSingleton<IMongoDbSettings>(serviceProvider =>
-                serviceProvider.GetRequiredService<IOptions<MongoDbSettings>>().Value);
-        }
+        //    services.AddSingleton<IMongoDbSettings>(serviceProvider =>
+        //        serviceProvider.GetRequiredService<IOptions<MongoDbSettings>>().Value);
+        //}
     } 
 }
